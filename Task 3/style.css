@@ -1,0 +1,495 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+    color: white;
+    }
+    html,body{
+    height: 100%;
+    width: 100%;
+    }
+    .main{
+        width: 100%;
+    }
+    .page1 video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        z-index: -1;
+        filter: brightness(.8);
+    }
+    .page1{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+        z-index: 999;
+    }
+    .nav img{
+        width: 70px;
+    }
+    .nav .right{
+        display: flex;
+        align-items: center;    
+        gap: 25px;
+    }
+    .nav .right h5{
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    .nav .right i{
+        font-size: 18px;
+    }
+    .page1-text{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page1-text h1{
+        transition: .4s;
+        font-size: 90px;
+    }
+    .page1-text h1:hover{
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+    }
+    .page1-text a{
+        transition: .4s;
+        text-decoration: none;
+        border: 1.5px solid white;
+        border-radius: 50px;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .page1-text a:hover{
+        background-color: white;
+        color: black;
+    }
+    /*------------page2-------------------*/
+    .page2{
+        padding: 45px 10px;
+        height: fit-content;
+        width: 100%;
+        background-color: #3C208C;
+        display: flex;
+        align-items: center;
+        gap: 30px;    
+    }
+    .page2-text h1{
+        font-size: 24px;
+        color: white;
+        margin-bottom: 20px;
+        opacity: 1;
+    }
+    .page2-text p{
+        opacity: 1;
+    }
+    .page2 img{
+        width: 280px;
+        opacity: 1;
+    }
+    /*------------page3-------------------*/
+    .page3{
+        width: 100%;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .page3 h1{
+        font-size: 90px;
+        transform: translateY(130%);
+        color: #3C208C;
+    }
+    .page3 img{
+        margin-top: 200px;
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    /*------------page4-------------------*/
+    .page4{
+        padding: 400px 30px;
+        padding-bottom: 350px;
+        width: 100%;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        gap: 80px;
+        align-items: center;
+    }
+    .page4 img{
+        width: 600px;
+        border-radius: 30px;
+    }
+    .text *{
+        margin: 14px 0px;
+        color: black;
+    }
+    .f-left *, .f-right *{
+        font-weight: 300;
+        color: black;
+        font-size: 16px;
+    }
+    
+    .f-left i, .f-right i{
+        color: #3C208C;
+    }
+    .text h3{
+        font-size: 24px;
+        border: 1px solid #3C208C;
+        display: inline-block;
+        padding: 5px 30px;
+        color: white;
+        background-color: #3C208C;
+        border-radius: 20px 0px 20px 0px;
+        font-weight: 100;
+    }
+    .text h1{
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        margin-top: 3px;
+        font-size: 44px;
+    }
+    .text p{
+        font-size: 16px;
+        font-weight: 200;
+    }
+    .features{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    .features h4{
+        margin-top: 40px;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .f-left i, .f-right i{
+        margin-right: 5px;
+        font-size: 20px;
+    }
+    .f-left h5, .f-right h5{
+        font-size: 20px;   
+        text-align: center;
+    }
+    #readmore{
+        padding: 10px 30px;
+        font-size: 18px;
+        border-radius: 20px;
+        font-weight: 100;
+    }
+    
+    /*------------page5-------------------*/
+    .page5{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .moving-page5{
+        /* margin-top: 100px; */
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        pointer-events: none;
+    }
+    .moving-page5::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .moving-page5 h1{
+        -webkit-text-stroke: black;
+        -webkit-text-stroke-width: 1.5px;
+        font-size: 7vw;
+        color: transparent;
+        margin-right: 30px;
+        display: inline-block;
+        animation-timing-function: linear;
+        animation-name: scroll;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        opacity: .3;
+    }
+    @keyframes scroll {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-100% - 34px));
+        }
+    }
+    .content-page5{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .page5 img{
+        margin-top: -20px;
+        width: 180px;
+    }
+    .content-page5 h1{
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4vw;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    .p-container p{
+        color: black;
+        text-align: center;
+        letter-spacing: .5px;
+    }
+    .p-container{
+        width: 1000px;
+    }
+    
+    /*------------page6-------------------*/
+    .page6{
+        width: 100%;
+        height: 200vh;
+        position: relative;
+    }
+    .page6 h1{
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 3vw;
+        font-weight: 100;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 40px 0px;
+    }
+    .moving-page6 {
+        margin: auto;
+        width: 80%;
+        white-space: nowrap;
+        overflow-x: scroll; /* Use 'hidden' for both x and y overflow */
+    }
+    
+    .moving-page6::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .moving-page6 img {
+        width: 200px;
+        display: inline-block;
+    }
+    #programs{
+        margin: 30px 0px;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4vw;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    .cards, .odd{
+        display: inline-block;
+        position:absolute;
+        left: 200px;
+        padding: 20px 30px;
+        background-color: #FFC53A;
+        box-shadow: 0px 0px 0px#3C208C;
+        border-radius: 50px;
+        width: 400px;
+        height: 500px;
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+        rotate: -7deg;
+        z-index: 0;
+        transition: rotate 1s, box-shadow 1s, z-index 1s;
+    }
+    .cards:hover{
+        box-shadow: 0px 0px 25px#3C208C;
+        rotate: 0deg;
+    }
+    .cards img{
+        border-radius: 50px;
+        width: 300px;
+    }
+    .cards h4{
+        color: black;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 400;
+    }
+    .cards .underline{
+        margin-top: -35px;
+        width: 125px;
+        height: 5px;
+        background-color: #3C208C;
+        border-radius: 2px;
+    }
+    .cards p{
+        margin-top: -20px;
+        color: black;
+        text-align: center;
+    }
+    .card2, .even{
+        position:absolute;
+        left: 700px;
+        bottom:80px;
+        rotate: 7deg;
+    }
+    
+    /*------------page7-------------------*/
+    .page7{
+        width: 100%;
+        height: 200vh;
+        position: relative;
+    }
+    
+    .card3{
+        position:absolute;
+        left: 200px;
+        top:-100px;
+        rotate: -7deg;
+    }
+    .card4{
+        position: absolute;
+        bottom: 500px;
+    }
+    .card5{
+        position: absolute;
+        bottom: 80px;
+    }
+    
+    
+    /*------------page8-------------------*/
+    .page8{
+        width: 100%;
+        height: 200vh;
+        position: relative;
+    }
+    .card6{
+        position:absolute;
+        top:-300px;
+        rotate: 7deg;
+    }
+    .card7{
+        position:absolute;
+        top:100px;
+        rotate: -7deg;
+        
+    }
+    .card8{
+        
+        position:absolute;
+        top:400px;
+        rotate: 7deg;
+    }
+    .card9{
+        position:absolute;
+        top:800px;
+        rotate: -7deg;
+        
+    }
+    
+    /*------------page9-------------------*/
+    .page9{
+        width: 100%;
+        height: auto;
+        margin-top: 150px;
+        padding-top: 100px;
+        padding-left: 80px;
+        padding-right: 0px;
+        padding-bottom: 70px;
+    }
+    .page9 img{
+        border-radius: 0px;
+    }
+    
+    
+    /*------------page10-------------------*/
+    .page10 {
+        width: 100%;
+        height: 100vh;
+        background-color: #010035;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .page10 .top{
+        margin-top: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page10 .bottom{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    .page10-text img{
+        width: 60px;
+        margin-bottom: 50px;
+    }
+    .page10-text h2{
+        margin-bottom: 50px;
+        font-size: 28px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+    .page10-text h4{
+        font-weight: 300;
+        margin-top: 15px;
+        color: white;
+        transition: color .5s;
+    }
+    .page10-text h4:hover{
+        color: #FFC53A;     
+    }
+
+    .page10 .bottom{
+        height: 100px;
+        border-top: 1px solid #9776f3;
+    }
+    .page10 .bottom .left h4{
+        margin-bottom: 15px;
+    }
+    .page10 .bottom .left a{
+       text-decoration: none;
+       opacity: .5;
+    }
+    .page10 .bottom .right{
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        font-size: 24px;
+    }
+    .page10 .bottom .right a{
+        text-decoration: none;
+    }
+
+    
